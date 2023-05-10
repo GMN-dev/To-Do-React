@@ -1,0 +1,9 @@
+.container{
+    margin: auto;
+    max-width: 600px;
+    padding: 10px 20px;
+}
+
+h1{
+    color: #EEEEEE;
+}

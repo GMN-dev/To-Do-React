@@ -1,0 +1,35 @@
+.form{
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+.input-task{
+    border-radius: 7px;
+    padding: 5px;
+    background-color: #222831;
+    color: #EEEEEE;
+    font-size: 1.1rem;
+    width: calc(100% - 37px);
+    margin-right: 10px;
+    border: none;
+    box-shadow: 0 2px 7px 1px rgb(0, 0, 0, 0.3);
+
+}
+
+.add-button img{
+    height: 37px;
+}
+
+
+.add-button img:active{
+    transform: scale(0.9)
+}
+
+.add-button{
+    background-color: transparent;
+    border: none;
+    transition: 1s;
+}
+
