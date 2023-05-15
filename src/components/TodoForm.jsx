@@ -28,7 +28,7 @@ export default function TodoForm(props){
     
     return (
         <form className="form" action="#">
-            <input className="input-task" placeholder='"fazer dever de casa..."' onChange={handleChange} value={text} type="text"/>
+            <input className="input-task" placeholder='"fazer dever de casa..."' onChange={handleChange} value={text || ''} type="text"/>
             <button className="add-button" onClick={addItem}><img src="/images/add.png" alt="" /></button>
         </form>
     )
