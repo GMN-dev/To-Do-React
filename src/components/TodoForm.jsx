@@ -17,7 +17,6 @@ export default function TodoForm(props){
 
         if (text){
             props.onSetListTask(text)
-
             // Setando o texto para uma string vazia, isso fara com que o input volte ao estado em branco
             setText('')
         }else(
@@ -29,7 +28,7 @@ export default function TodoForm(props){
     return (
         <form className="form" action="#">
             <input className="input-task" placeholder='"fazer dever de casa..."' onChange={handleChange} value={text || ''} type="text"/>
-            <button className="add-button" onClick={addItem}><img src="/images/add.png" alt="" /></button>
+            <button className="add" onClick={addItem}>Adicionar</button>
         </form>
     )
 

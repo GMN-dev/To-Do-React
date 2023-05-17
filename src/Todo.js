@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import List from "./components/List";
-import TodoForm from "./components/TodoForm";
 import Item from "./item";
-
+import Modal from "./components/Modal";
+// import Cabecalho from "./components/Cabecalho
+import './styles/button.css'
+import './styles/cabecalho.css'
 
 export default function Todo(){
 
-    let [listTask, setListTask] = useState([])
+    let [listTask, setListTask] = useState(localStorage.getItem('listTask') ? JSON.parse(localStorage.getItem('listTask')) : [])
+    
+    let [show, setShow] = useState(false)
+
+    function hideModal(e){
+        let event = e.target;
+        if (event.id === "fora"){
+            setShow(false)
+        }
+    }
+
+    useEffect(()=>{
+        let lista = JSON.stringify(listTask);
+        localStorage.setItem('listTask', lista)
+    }, [listTask])
 
     function updateListTask(task){
         let t = new Item(task);
@@ -30,11 +46,16 @@ export default function Todo(){
 
     return( 
         <>
+        <Modal show={show} onHideModal={hideModal} onSetListTask={updateListTask}></Modal>
             <div className="container">
-                <h1>To-do</h1> 
-                <TodoForm onSetListTask={updateListTask} ></TodoForm>
-
-                <List onItemDeleted={onItemDeleted} onTaskCompleted={onTaskCompleted} listTask={listTask} ></List>
+                <header className="container-cabecalho">
+                    <h1>
+                        To-do
+                    </h1>
+                    <button className="add-button" onClick={()=>{setShow(true)}} ><img src="/images/add.png" alt="add" /></button>
+                </header> 
+                {/* <TodoForm onSetListTask={updateListTask} ></TodoForm> */}
+                <List onItemDeleted={onItemDeleted} onTaskCompleted={onTaskCompleted} listTask={listTask}></List>
             </div>
         </>
     )

@@ -1,7 +1,6 @@
 .form{
-    margin-top: 10px;
     display: flex;
-    margin-bottom: 30px;
+    width: 40vw;
 }
 
 
@@ -11,25 +10,23 @@
     background-color: #222831;
     color: #EEEEEE;
     font-size: 1.1rem;
-    width: calc(100% - 37px);
+    width: calc(100% - 57px);
     margin-right: 10px;
     border: none;
     box-shadow: 0 2px 7px 1px rgb(0, 0, 0, 0.3);
-
 }
 
-.add-button img{
-    height: 37px;
-}
-
-
-.add-button img:active{
-    transform: scale(0.9)
-}
-
-.add-button{
-    background-color: transparent;
+.add{
+    padding: 8px;
+    background-color: #FFD369;
+    color: #222831;
     border: none;
-    transition: 1s;
+    border-radius: 5px;
+    font-weight: 600;
 }
 
+@media (max-width: 775px) {
+    .form{
+        width: 70vw;
+    }
+}

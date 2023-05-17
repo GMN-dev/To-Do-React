@@ -1,0 +1,14 @@
+.add-button img{
+    height: 37px;
+}
+
+
+.add-button img:active{
+    transform: scale(0.9)
+}
+
+.add-button{
+    background-color: transparent;
+    border: none;
+    transition: 1s;
+}
