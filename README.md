@@ -2,4 +2,4 @@
 To-do com React
 </h1>
 
-<h3><a href="to-do-react-gmn-dev.vercel.app">Deploy do Projeto</a></h3>
+<h3><a href="https://to-do-react-gmn-dev.vercel.app/">Link do Deploy</a></h3>
